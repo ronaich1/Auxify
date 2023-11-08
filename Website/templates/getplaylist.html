@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Get Playlist{% endblock %} {% block content %}
+<h2 class="position-absolute top-45 start-50 translate-middle">Enter your playlist name:</h2>
+<div class="position-absolute top-50 start-50 translate-middle">
+  <form method="POST">
+  {% if notfound %}
+    <p class="position-absolute top-0 start-50 translate-middle">Playlist not found, please try again!</p>
+  {% endif %}
+  <div class="form-group">
+    <label for="playlist">(Case Sensitive!)</label>
+    <input
+      type="text"
+      class="form-control"
+      id="playlist"
+      name="playlist"
+      placeholder="Enter playlist"
+      />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary btn-lg">Enter</button></form>
+</div>
+
+
+
+{% endblock %}
